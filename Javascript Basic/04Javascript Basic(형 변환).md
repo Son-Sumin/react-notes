@@ -19,10 +19,10 @@
   Number(null)       => 0  (prompt 취소 - null 반환 - 0)
   Number(undefined)  => NaN
 
-  Number(0)       => false
-  Number("0")     => true
-  Number('')      => false
-  Number(' ')     => true
+  Boolean(0)       => false
+  Boolean("0")     => true
+  Boolean('')      => false
+  Boolean(' ')     => true
 
 <pre>
 <code>
