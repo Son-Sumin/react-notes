@@ -1,10 +1,8 @@
 ### 논리연산자
 
 #### || (or), && (and), !(not)   
-- || (or)  : 여러 개 중 하나라도 true면 true   
-           즉, 모든 값이 false일 때만 false   
-- && (and) : 모든 값이 true면 true   
-           즉, 하나라도 false면 false   
+- || (or)  : 여러 개 중 하나라도 true면 true. 즉, 모든 값이 false일 때만 false   
+- && (and) : 모든 값이 true면 true. 즉, 하나라도 false면 false   
 - !(not)   : true면 true, false면 false   
 <br>
 
@@ -67,8 +65,10 @@
         console.log('돌아가');
     }  // 통과
 
+
     // 왜 통과일까?
-    // &&보다 ||이 나중에 평가되어 isAdult = true이기에 최종 출력이 true, 즉 통과로 출력
+    // &&보다 ||이 나중에 평가되어 맨 마지막 평가항목이 isAdult = true이기에 최종 출력이 true, 즉 통과로 출력
+
 
     if(gender === 'M' && (name ==='Mike' || isAdult)) {
         console.log('통과');
