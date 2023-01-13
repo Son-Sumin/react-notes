@@ -10,12 +10,17 @@
   X % 5 = 0  => 0~4 값만 반환   
 
 #### 거듭제곱
-- const num = 2**3;   
-  console.log(num);  // 8   
+<pre>
+<code>
+    const num = 2**3;   
+    console.log(num);  // 8   
+</code>
+</pre>
+<br>
 
 #### 연산자 우선순위
-- * /  >  + -
-- 연산자 줄여쓰기
+* /  >  + -
+연산자 줄여쓰기 가능
 <pre>
 <code>
     let num = 10;
