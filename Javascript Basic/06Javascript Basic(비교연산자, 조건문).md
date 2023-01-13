@@ -6,14 +6,14 @@
 - 비교연산자를 사용하면 값을 반환한다  => true / false
 <pre>
 <code>
-    console.log(10>5);     // true
-    console.log(10 == 5);  // false
-    console.log(10 != 5);  // true
+    console.log(10>5);      // true
+    console.log(10 == 5);   // false
+    console.log(10 != 5);   // true
 
     const a = 1;
     const b = "1";
     console.log(a == b);    // true  // 값 비교
-    console.log(a === b);   // false // 값, 타입 비교  =>  ==보다 추천
+    console.log(a === b);   // false // 값, 타입 비교  =>  ==보다 ===추천
 </code>
 </pre>
 <br>

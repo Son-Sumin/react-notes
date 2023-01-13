@@ -86,7 +86,7 @@ undefined : 값이 할당되지 않음
 
 #### 5. typeof 연산자   
 변수의 자료형을 알 수 있음   
-**주의** null != 객체 임을 인지! => JS 초기ver 오류, 호환성 위해 수정X   
+**주의** `null != 객체` 임을 인지! => JS 초기ver 오류, 호환성 위해 수정X   
 <pre>
 <code>
     const name = "Mike";
