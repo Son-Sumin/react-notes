@@ -44,10 +44,57 @@
 
 <pre>
 <code>
-    // 전역변수와 지역변수 //
+    // 전역변수와 지역변수 예시1 //
+    // 전역변수와 지역변수는 서로 간섭받지 않는다.
     let msg = "welcome";    // 전역변수
+    console.log(msg);       // "welcome"
 
-    
+    function sayHello(name) {
+        let msg = "Hello";  // 지역변수
+        console.log(msg + ' ' + name);
+    }
+    sayHello('Mike');       // "Hello Mike"
+    onsole.log(msg);       // "welcome"
+</code>
+</pre>
+<br>
+
+<pre>
+<code>
+    // 전역변수와 지역변수 예시2 //
+    let name = "Mike";      // 전역변수
+
+    function sayHello(name) {
+        console.log(name);  // 이때 매개변수는 전역변수를 복사된 후 지역변수가 된다
+    }
+    sayHello();             // undefined
+    sayHello('Jane');       // "Jane"
+</code>
+</pre>
+<br>
+- 전역변수가 많아지면 관리가 힘들어지니, 함수에 특화된 지역변수를 가급적 사용하자
+
+<pre>
+<code>
+    // OR //
+
+    function sayHello(name) {
+        let newName = name || 'friend';
+        let msg = `Hello, ${newName}`
+        console.log(msg);\
+    }
+    sayHello();             // "Hello, friend"
+    sayHello('Jane');       // "Hello, Jane"
+
+
+    // default value //
+
+    function sayHello(name = 'friend') {  // name의 default value는 friend
+        let msg = `Hello, ${name}`
+        console.log(msg);\
+    }
+    sayHello();             // "Hello, friend"
+    sayHello('Jane');       // "Hello, Jane"
 </code>
 </pre>
 <br>
