@@ -72,10 +72,13 @@
 </code>
 </pre>
 <br>
+
 - 전역변수가 많아지면 관리가 힘들어지니, 함수에 특화된 지역변수를 가급적 사용하자
 
 <pre>
 <code>
+    // 함수 더 알아보기 //
+
     // OR //
 
     function sayHello(name) {
