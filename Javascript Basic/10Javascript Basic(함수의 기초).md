@@ -65,7 +65,7 @@
     let name = "Mike";      // 전역변수
 
     function sayHello(name) {
-        console.log(name);  // 이때 매개변수는 전역변수를 복사된 후 지역변수가 된다
+        console.log(name);  // 이때 매개변수 name은 전역변수를 복사된 후 지역변수가 된다
     }
     sayHello();             // undefined
     sayHello('Jane');       // "Jane"
@@ -80,7 +80,6 @@
     // 함수 더 알아보기 //
 
     // OR //
-
     function sayHello(name) {
         let newName = name || 'friend';
         let msg = `Hello, ${newName}`
@@ -91,13 +90,37 @@
 
 
     // default value //
-
     function sayHello(name = 'friend') {  // name의 default value는 friend
         let msg = `Hello, ${name}`
         console.log(msg);\
     }
     sayHello();             // "Hello, friend"
     sayHello('Jane');       // "Hello, Jane"
+
+
+    // return으로 값 반환 1 //
+    function add(num1, num2) {
+        return num1 + num2;
+    }
+    const result = add(2, 3);
+    console.log(result)     // 5
+
+
+    // return으로 값 반환 2 //
+    // return문이 없어도 undefined 반환한다
+    // return; 은 그 즉시 코드를 종료시키고, undefined 반환한다
+    function showError() {
+        alert('에러가 발생했습니다.');
+        return;
+        alert('이 코드는 절대 실행되지 않습니다.');
+    }
+    const result = showError(); // alert창 활성화됨
+    console.log(result)         // undefined
 </code>
 </pre>
 <br>
+
+- 함수 사용 팁   
+1. 한번에 한 작업만 (하나의 함수가 여러가지 기능을 하지 않도록 잘게 나누기)   
+2. 변수와 같이 함수도 어떤 동작인지 알 수 있도록 네이밍하기   
+ex) showError, getName, createUserData, checkLogin

@@ -13,7 +13,7 @@
     const a = 1;
     const b = "1";
     console.log(a == b);    // true  // 값 비교
-    console.log(a === b);   // false // 값, 타입 비교  =>  ==보다 ===추천
+    console.log(a === b);   // false // 값, 타입 비교  →  ==보다 ===추천
 </code>
 </pre>
 <br>
