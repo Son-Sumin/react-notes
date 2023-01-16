@@ -39,7 +39,7 @@
 #### 함수 선언문과 함수 표현식 중 무엇을 사용해야할까
  대부분 상관없이 사용한다. 에러 발생하면 위로 옮기면 된다.    
  더 자유롭고 편하게 코딩하려면 **함수 선언문 추천**   
-
+<br>
 
 #### 화살표 함수(arrow function)
 <pre>
@@ -48,18 +48,18 @@
         return num1 + num2;
     }
 
-    // return믄은 ( )로 표현 가능
-    // 한 줄이면 ( ) 생략 가능
+    * return믄은 ( )로 표현 가능
+    * 한 줄이면 ( ) 생략 가능
     let add = (num1, num2) => num1 + num2;
 
-    // 인수가 하면 ( ) 생략 가능
-    // 인수가 없으면  ( ) 생략 불가능
+    * 인수가 하면 ( ) 생략 가능
+    * 인수가 없으면  ( ) 생략 불가능
     let sayHello = name => `Hello, ${name}`;
     let showError = () => {
         alert('error!');
     }
 
-    // return문이 있어도 return 전에 여러 줄의 코드가 있으면 ( ) 사용 불가
+    * return문이 있어도 return 전에 여러 줄의 코드가 있으면 ( ) 사용 불가
     let add = (num1, num2) => {
         const result = num1 + num2;
         return result;
@@ -83,6 +83,7 @@
     let showError = function() {
         console.log('error');
     }
+
 
     // 화살표 함수 //
     let showError = () => {
