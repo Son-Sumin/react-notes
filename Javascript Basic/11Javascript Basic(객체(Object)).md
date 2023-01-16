@@ -52,13 +52,8 @@
     * 한 줄이면 ( ) 생략 가능
     let add = (num1, num2) => num1 + num2;
 
-<<<<<<< Updated upstream
-    * 인수가 하면 ( ) 생략 가능
+    * 인수가 하나면 ( ) 생략 가능
     * 인수가 없으면  ( ) 생략 불가능
-=======
-    // 인수가 하나면 ( ) 생략 가능
-    // 인수가 없으면  ( ) 생략 불가능
->>>>>>> Stashed changes
     let sayHello = name => `Hello, ${name}`;
     let showError = () => {
         alert('error!');
@@ -90,11 +85,7 @@
     }
 
 
-<<<<<<< Updated upstream
-    // 화살표 함수 //
-=======
     // 화살표 함수1 //
->>>>>>> Stashed changes
     let showError = () => {
         console.log('error')
     }
