@@ -71,7 +71,7 @@
   객체 순회하며 값 획득 가능
 <pre>
 <code>
-    for (let key in superman) {
+    for(let key in superman) {
         console.log(key)
         console.log(superman[key])
     }
@@ -95,11 +95,14 @@
     superman.hairColor = 'black';
     superman.['hobby'] = 'football';
     delete superman.age;
-    console.log(superman)               // Object {
-                                                hairColor : "black",
-                                                hobby : "football",
-                                                name : "clark",
-                                            }
+    console.log(superman)
+    /*
+    Object {
+        hairColor : "black",
+        hobby : "football",
+        name : "clark",
+    }
+    */
 </code>
 </pre>
 <br>
@@ -138,7 +141,8 @@
 <code>
     // 객체 in
     function isAdult(user){
-        if(user.age < 20) {
+        if(!('age' in user) ||      // user에 age가 없거나
+            user.age < 20) {        // 20살 미만이거나
             return false;
         } 
         return true;
@@ -156,6 +160,23 @@
     console.log(isAdult(Mike))      // true
     console.log(isAdult(Jane))      // true
                                     // Jane의 property 중 age가 존재하지 않아 if문은 항상 false이고, true가 반환됨 (if문 조건 추가)
+</code>
+</pre>
+<br>
+
+- 예제로 배워보기 4
+<pre>
+<code>
+    // 객체 for ... in
+    const Mike = {
+        name: "Mike",
+        age: 30,
+    };
+
+    for(key in Mike) {              // key는 Mike가 갖고 있는 property를 의미함. 다른 값이 와도 됨.
+        console.log(key)            // "name" "age"
+        console.log(Mike[key])      // Mike['name']="Mike"   Mike['age']=30
+    }
 </code>
 </pre>
 <br>
