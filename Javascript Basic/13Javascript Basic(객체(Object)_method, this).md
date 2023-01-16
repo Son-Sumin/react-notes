@@ -7,10 +7,7 @@ method : 객체 프로퍼티로 할당된 함수
 const superman = {
     name : 'clark',
     age : 33,
-    fly : function(){
-        console.log('날아갑니다.')
-    // 줄여쓰기 가능
-    fly(){
+    fly : function(){       // 줄여쓰기 가능 => fly(){ 
         console.log('날아갑니다.')
     }
 }
@@ -19,8 +16,7 @@ superman.fly();     // 날아갑니다.
 </pre>
 <br>
 
-- 객체와 method의 관계   
-  * this   
+- 객체와 method의 관계 - this   
 <pre>
 <code>
 const user = {
@@ -38,9 +34,11 @@ user.sayHello();    // Hello, I'm Mike
   * this 예제   
   * 화살표함수는 일반함수와 달리 자신만의 this를 가지지 않음   
     화살표함수 내부에서 this를 사용하면 그 this는 외부에서 값을 가져옴   
+    이때 this는 전역객체이고 브라우저 환경(window), Node js(global)을 가리킨다   
 <pre>
 <code>
 // this 예제 //
+
 let boy = {
     name : 'Mike',
     sayHello,
@@ -67,15 +65,15 @@ let boy = {
 }
 boy.sayHello();             // this != boy
 
-** 전역객체 this
+** 전역객체 this **
  - 브라우저 환경 : window
  - Node js : global
 </code>
 </pre>
 <br>
 
-- 예제로 배워보기 1
-  method의 this는 해당 객체를 가리킴   
+- 예제로 배워보기 1   
+  method의 this는 해당 객체 { }를 가리킴   
   method에서 객체명을 직접 활용하는 것보다 this를 활용하는 것이 좋음   
 <pre>
 <code>
@@ -83,13 +81,13 @@ boy.sayHello();             // this != boy
     let boy = {
         name : "Mike",
         showName : function() {     // method의 this는 해당 객체를 가리킴
-            console.log(this.name)  // method에서 객체명을 직접 활용하는 것보다 this를 활용하는 것이 좋음
+            console.log(this.name)  // method에 객체명(boy)을 직접 활용하는 것보다 this를 활용하는 것이 좋음
         }
     };
 
     boy.showName();     // "Mike"
 
-    let man = boy;      // boy와 man 2가지로 접근 가능해짐
+    let man = boy;      // 객체가 있는데 boy와 man 2가지로 접근 가능해짐
     man.showName();     // "Mike"
 
     // man.name = "Tom"
@@ -101,14 +99,15 @@ boy.sayHello();             // this != boy
 </pre>
 <br>
 
-- 예제로 배워보기 2
+- 예제로 배워보기 2   
+  객체의 method를 작성할 때 this를 활용할거면 화살표 함수를 사용하지 않는 것이 좋다
 <pre>
 <code>
     // method
     let boy = {
         name : "Mike",
         sayThis : function() {
-            console.log(this)       // this는 boy 객체 의미함
+            console.log(this)       // this는 { } 객체 의미함
         }
     };
 
@@ -120,6 +119,16 @@ boy.sayHello();             // this != boy
     }
     */
 
+    // method - 전역객체 this   
+        let boy = {
+        name : "Mike",
+        sayThis : () => {
+            console.log(this)
+        }
+    };
+
+    boy.sayThis();      // window
+                        // 객체의 method를 작성할 때 화살표 함수를 사용하지 않는 것이 좋다
 </code>
 </pre>
 <br>
