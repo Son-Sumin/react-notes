@@ -23,7 +23,7 @@
 
     // 매개변수 있는 함수2 //
     function sayHello(name) {
-        console.log(name);    // undefined → false
+        console.log(name);    // (확인용) undefined → false
         let msg = `Hello`;    // const → let (변수가 바뀔 수 있으니 바꿈)
         if(name) {
             msg += `, ` + name;
@@ -54,7 +54,7 @@
         console.log(msg + ' ' + name);
     }
     sayHello('Mike');       // "Hello Mike"
-    onsole.log(msg);       // "welcome"
+    console.log(msg);       // "welcome"
 </code>
 </pre>
 <br>
