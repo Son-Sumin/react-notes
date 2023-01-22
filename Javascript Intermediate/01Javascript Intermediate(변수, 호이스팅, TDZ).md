@@ -69,12 +69,12 @@
 
      // 이상 O
     let age = 30;
-    // TDZ ~
+/* TDZ ~
     function showAge() {  
       console.log(age);
       let age = 20;     // 호이스팅 발생시킴
     }
-    // ~ TDZ
+ ~ TDZ */
     showAge();          // 위에서 호이스팅 발생하지 않았다면 정상적으로 30이 출력되야함
   </code>
   </pre>
@@ -97,7 +97,7 @@
   1. 선언 단계   
      호이스팅 되면서 선언 단계가 이루어짐   
   2. 초기화 단계   
-     실제 코드에 도달했을 때 발생 → ReferenceError 발생   
+     실제 코드에 도달했을 때 발생 → 그렇지 않으면 ReferenceError 발생   
   3. 할당 단계   
     <br>
 
@@ -147,5 +147,26 @@
   console.log(result);    // ReferenceError
   ```
 
-**var는 이제 사용하지 않고 let, const 사용 권장함**
-**예측 가능한 결과를 내고 버그를 줄일 수 있다!**
+**var는 이제 사용하지 않고 let, const 사용 권장함**   
+**예측 가능한 결과를 내고 버그를 줄일 수 있다!**   
+<br>
+
+### var, let, const 비교    
+- var   
+  * 한 번 선언된 변수를 다시 선언할 수 있다 (덮어쓰기 가능)   
+  * TDZ(Temporal Dead Zone)의 영향받지 않음   
+  * 변수의 생성과정 : 선언 및 초기화 → 할당   
+    할당 전에 호출하면 에러가 아닌 undefined 출력   
+  * 함수 스코프
+  
+- let   
+  * 최초로 사용하는 변수명에 let 붙여 동일한 변수명 사용할 때 에러 발생시킴 (덮어쓰기 불가능)   
+  * TDZ(Temporal Dead Zone)의 영향받음   
+  * 변수의 생성과정 :  선언 → 초기화 → 할당   
+  * 블록 스코프
+
+- const   
+  * 절대로 바뀌지 않는 상수, 변경하려 하면 에러 발생   
+  * TDZ(Temporal Dead Zone)의 영향받음   
+  * 변수의 생성과정 : 선언 + 초기화 + 할당   
+  * 블록 스코프
