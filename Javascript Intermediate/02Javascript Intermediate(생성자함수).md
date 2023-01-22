@@ -1,4 +1,6 @@
 ### 생성자 함수
+참고 : [this](https://github.com/Son-Sumin/react-notes/blob/main/Javascript%20Basic/13Javascript%20Basic(%EA%B0%9D%EC%B2%B4(Object)_method%2C%20this).md)
+
 
 #### 생성자 함수와 객체 리터럴
 비슷한 객체 리터럴을 여러 개 만들어야할 때 생성사 함수 활용   
@@ -26,7 +28,7 @@ let user3 = new User('Tom', 17);    → User {name: "Tom", age: 17}
 ```
 <br>
 
-- 동작 원리
+- **동작 원리**
 ```
 function User(name, age) {
     // this = {}
