@@ -3,7 +3,7 @@
 
 #### let const var 비교   
 - let const : ES6부터   
-  var : ES6 이전   
+  var : ES6 이전부터   
 - 대부분의 경우 let과 var는 바꿔서 사용해도 무방하다
 - 차이점
   * var : 한 번 선언된 변수를 다시 선언할 수 있다
@@ -11,6 +11,7 @@
   <pre>
   <code>
     /* var는 한 번 선언된 변수를 다시 선언할 수 있다 */
+
     var name = 'Mike';
     console.log(name);      // Mike
 
@@ -30,6 +31,7 @@
   <pre>
   <code>
     /* var는 선언하기 전에 사용할 수 있다 */
+
     console.log(name);      // undefined (에러 아님)
     var name = 'Mike';
 
@@ -53,7 +55,7 @@
   </pre>
   <br>
 
-- 호이스팅(Hoisting) : 스코프 내부 어디서든 변수 선언은 최상위에 선언된 것처럼 행동   
+- **호이스팅(Hoisting)** : 스코프 내부 어디서든 변수 선언은 최상위에 선언된 것처럼 행동   
   호이스팅은 스코프 단위로 일어난다   
   
 <pre>
@@ -78,7 +80,7 @@
   </pre>
   <br>
 
-- 변수의 생성과정
+- **변수의 생성과정**
 1. 선언 단계   
 2. 초기화 단계   
    초기화 : undefined을 할당해주는 단계
@@ -86,22 +88,22 @@
 <br>
 
   * var   
-    1. 선언 및 초기화 단계   
-       할당 전에 호출하면 에러가 아닌 undefined 출력   
-    2. 할당 단계
+  1. 선언 및 초기화 단계   
+     할당 전에 호출하면 에러가 아닌 undefined 출력   
+  2. 할당 단계
 <br>
 
   * let   
-    1. 선언 단계   
-       호이스팅 되면서 선언 단계가 이루어짐   
-    2. 초기화 단계   
-       실제 코드에 도달했을 때 발생 → ReferenceError 발생   
-    3. 할당 단계   
+  1. 선언 단계   
+     호이스팅 되면서 선언 단계가 이루어짐   
+  2. 초기화 단계   
+     실제 코드에 도달했을 때 발생 → ReferenceError 발생   
+  3. 할당 단계   
     <br>
 
   * const   
-    1. 선언 + 초기화 + 할당   
-       let과 var는 선언만 하고 나중에 할당이 가능함   
+  1. 선언 + 초기화 + 할당   
+     let과 var는 선언만 하고 나중에 할당이 가능함   
 <pre>
 <code>
     let name;
@@ -115,3 +117,35 @@
 </code>
 </pre>
 <br>
+
+
+- **스코프**
+  * var : 함수 스코프(functional-scoped)   
+  * let, const : 블록 스코프(block-scoped)   
+  <br>
+
+  ```
+  블록 스코프는 모든 코드 블록 내에서 선언된 변수(지역변수)는 코드 블록 내에서만 유효하며 외부에서는 접근할 수 없다.   
+    ex) 함수, if문, for문, while문, try/catch문 등   
+
+  함수 스코프는 함수 내에서만 선언된 변수가 그 지역변수가 된다.
+
+  /* 예시1 */
+  const age = 30;
+  
+  if(age>19) {
+    var txt = '성인';
+  }
+  console.log(txt);      // 성인  → age 사용 불가
+
+
+  /* 예시2 */
+  function add(num1, num2) {
+    var result = num1 + num2;
+  }
+  add(2,3);
+  console.log(result);    // ReferenceError
+  ```
+
+**var는 이제 사용하지 않고 let, const 사용 권장함**
+**예측 가능한 결과를 내고 버그를 줄일 수 있다!**
