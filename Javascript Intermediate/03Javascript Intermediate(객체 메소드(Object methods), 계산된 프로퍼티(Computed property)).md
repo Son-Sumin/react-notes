@@ -27,7 +27,7 @@ Object.fromEntries() : 키, 값 배열을 객체로 반환
 
 - Object.assign() : 객체 복제   
   * Object.assign(담을 객체, 병합시킬 객체1, 병합시킬 객체2, ...)   
-  * 기존에 추가, 덮어쓰기, 여러 개 병합
+  * 기존에 추가, 덮어쓰기, 여러 개 병합 가능   
 ```
 const user = {
     name : 'Mike',
@@ -37,7 +37,6 @@ const user = {
 
 // { name : 'Mike', age : 30 }을 user와 cloneUser 2개로 접근 가능한 것이지 복제한 것이 아니다!
 // const cloneUser = user;      ('user'라는 참조값만 복사)
-
 
 
 
@@ -66,6 +65,7 @@ const info2 = {
     hobby : 'studying'
 }
 Object.assign(user, info1, info2);
+// { name : 'Mike', age : 30, gender : 'male', hobby : 'studying'}
 ```
 <br>
 
@@ -73,8 +73,7 @@ Object.assign(user, info1, info2);
 - Object.values() : 값 배열 반환   
 - Object.entries() : 키, 값 배열 반환 (배열 안에 배열로 출력)
 - Object.fromEntries() : 키, 값 배열을 객체로 반환
-  * Object.keys(객체), Object.values(객체)   
-  * Object.entries(객체), Object.fromEntries(객체)   
+  * Object.keys(객체), Object.values(객체), Object.entries(객체), Object.fromEntries(객체)   
 ```
 const user = {
     name : 'Mike',
