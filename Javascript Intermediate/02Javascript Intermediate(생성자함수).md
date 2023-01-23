@@ -56,7 +56,7 @@ function User(name, age) {
     }
 
 let user 5 = new User('Han', 40);
-user5.sayName();    // 'Han'    → 함수 sayName에서 this.named은 여기서 user5 의미함
+user5.sayName();    // 'Han'    → 함수 sayName에서 this.name은 여기서 user5 의미함
 }
 ```
 <br>
