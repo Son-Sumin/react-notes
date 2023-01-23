@@ -62,10 +62,13 @@ if(desc.indexOf('Hi') > -1) {
 <br>
 
 - str.slice(n, m)
-  * n ~ m 까지의 문자열만 뽑기
+  * n ~ m-1 까지의 문자열만 뽑기
+  * m : 없으면 문자열 끝까지, 양수면 m-1까지, 음수면 끝에서 m번째 위치까지   
 ```
 let desc = "abcdefg";
 
-
+desc.slice(2);          // "cdefg"
+desc.slice(0, 5);       // "abcde"
+desc.slice(2, -2);      // "cde"
 ```
 <br>
