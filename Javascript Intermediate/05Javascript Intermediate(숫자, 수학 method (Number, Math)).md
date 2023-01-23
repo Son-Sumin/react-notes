@@ -6,7 +6,8 @@
 - parseInt(), parseFloat()   
 - Math.max(), Math.min(), Math.abs(), Math.pow(n, m), Math.sqrt()   
 
-### Number method
+* * *
+
 - toString()   
   * 숫자를 문자로 바꿔주는 메소드   
   * 10진수 → 2진수 toString(2) / 16진수 toString(16)   
@@ -20,12 +21,11 @@
   ```
   <br>
 
-### Math   
-Javascript에는 수학과 관련된 프로퍼티와 메소드를 갖고 있는 Math라는 내장 객체는 갖고 있다
-  * Math.PI : 원주율 구하기
-  * Math.ceil() : 올림   
-  * Math.floor() : 내림   
-  * Math.round() : 반올림    
+(Javascript에는 수학과 관련된 프로퍼티와 메소드를 갖고 있는 Math라는 내장 객체는 갖고 있다)
+- Math.PI : 원주율 구하기
+- Math.ceil() : 올림   
+- Math.floor() : 내림   
+- Math.round() : 반올림    
 ```
 Math.PI;                // 3.141592653589793
 
@@ -78,7 +78,7 @@ isNaN(3);               // false
 
 - parseInt() : 문자열을 숫자로 바꿔줌   
   * Number와 다른점 : 숫자와 문자가 혼용되어 있어도 동작함   
-  * parseInt는 읽을 수 있는 부분까지 읽고 문자가 나오면 숫자를 반환함   
+  * 동작원리 : parseInt는 읽을 수 있는 부분까지 읽고 문자가 나오면 숫자를 반환함   
   * parseInt는 숫자로 시작하지 않으면 NaN 반환함   
   * parseInt는 2번째 인수로 진수 지정 가능함 (2번째 인수에서 10진수로)   
   * parseInt는 소수점 이하는 무시하고, 정수만 반환함
@@ -113,7 +113,8 @@ Math.random();      // 0.89608906173
    식을 만들어야한다!
 Math.floor(Math.random()*100)+1;
 // *100  →  1 ~ 5 사이 임의의 숫자를 뽑는 것이었으면 *5
-// +1  →  Math.random() = 0.0~ 임을 대비함. 지금은 1 ~ 100 사이 임의의 숫자를 뽑는 것이니 Math.floor()시 0 나오는 것 방지함
+// +1  →  Math.random() = 0.0~ 임을 대비함.
+          지금은 1 ~ 100 사이 임의의 숫자를 뽑는 것이니 Math.floor()시 0 나오는 것 방지함
 ```
 <br>
 
