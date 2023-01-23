@@ -1,7 +1,7 @@
-### 변수(Variable), 호이스팅(Hoisting), TDZ(Temporal Dead Zone)
+## 변수(Variable), 호이스팅(Hoisting), TDZ(Temporal Dead Zone)
 참고 : [11Javascript Basic(객체(Object)_선언문, 표현식, 화살표함수)](https://github.com/Son-Sumin/react-notes/blob/main/Javascript%20Basic/11Javascript%20Basic(%EA%B0%9D%EC%B2%B4(Object)_%EC%84%A0%EC%96%B8%EB%AC%B8%2C%20%ED%91%9C%ED%98%84%EC%8B%9D%2C%20%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98).md)   
 
-#### # let const var 비교   
+### let const var 비교   
 - let const : ES6부터   
   var : ES6 이전부터   
 - 대부분의 경우 let과 var는 바꿔서 사용해도 무방하다

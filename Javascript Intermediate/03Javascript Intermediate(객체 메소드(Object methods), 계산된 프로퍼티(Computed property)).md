@@ -1,3 +1,3 @@
-### 연산자(Operators)
+## 객체 메소드(Object methods), 계산된 프로퍼티(Computed property)
 
-#### 나머지(%) 사용처
+### Computed property

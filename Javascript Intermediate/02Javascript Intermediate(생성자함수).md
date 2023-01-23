@@ -1,8 +1,8 @@
-### 생성자 함수
+## 생성자 함수
 참고 : [this](https://github.com/Son-Sumin/react-notes/blob/main/Javascript%20Basic/13Javascript%20Basic(%EA%B0%9D%EC%B2%B4(Object)_method%2C%20this).md)
+<br>
 
-
-#### 생성자 함수와 객체 리터럴
+### 생성자 함수와 객체 리터럴
 비슷한 객체 리터럴을 여러 개 만들어야할 때 생성사 함수 활용   
 생성자 함수는 관례적으로 첫 글자를 대문자로 표기   
 **생성자 함수는 꼭 new와 함께 사용해야 한다!!**
