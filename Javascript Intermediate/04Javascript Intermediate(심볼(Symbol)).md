@@ -7,7 +7,7 @@
 const obj = {
     1: '1입니다',
     false: '거짓'
-}
+};
 Object.keys(obj);       // ["1", "false"]
 obj['1'];               // "1입니다."
 obj['false'];           // "거짓"
@@ -46,7 +46,7 @@ const user = {
     name : 'Mike',
     age : 30,
     [id] : 'myid',   →  Computed property
-}
+};
 console.log(user);      // {name : "Mike", age : 30, Symbol(id) : "myid"}
 console.log(user[id]);  // "myid"
 
@@ -98,7 +98,47 @@ const user = {
     name : 'Mike',
     age : 30,
     [id] : 'myid',
-}
+};
 Object.getOwnPropertySymbols(user);     // [Symbol(id)]
 Reflect.ownKeys(user);                  // ["name", "age", Symbol(id)]
 ```
+<br>
+
+- 예제로 배워보기   
+```
+// 다른 개발자가 만들어 놓은 객체
+const user = {
+    name : 'Mike',
+    age : 30,
+};
+
+
+// 내가 작업
+// user.showName = function () {};
+const showName = Symbol("show name");
+user[showName] = function () {
+    console.log(this.name);
+};
+user[showName]();
+
+
+// 사용자가 접속하면 보는 메세지
+for (let key in user) {
+  console.log(`His ${key} is ${user[key]}.`);
+}
+  // 출력 내용
+     Mike
+     His name is Mike.
+     His age is 30.
+  // His showName is function () {}.
+  // for..in문은 심볼형 프로퍼티는 건너뜀
+
+
+
+/* Symbol을 쓰는 장점 */
+
+내가 작업한 메소드도 잘 나오고, 다른 개발자가 만든 코드에도 영향을 미치지 않는 선에서 메소드를 추가했다.
+원래 user에 showName이라는 프로퍼티가 존재했는지 고민할 필요 없고, 다른 사람이 만든 프로퍼티를 덮어 쓸 일도 없다.
+
+```
+<br>
