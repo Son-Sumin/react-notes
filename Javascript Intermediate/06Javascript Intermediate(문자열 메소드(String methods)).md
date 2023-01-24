@@ -4,10 +4,11 @@
 - 특정 위치에 접근 가능   
 - toUpperCase() / toLowerCase()    
 - str.indexOf(text), str.slice(n, m), str.substring(n, m), str.substr(n, m)   
-- str.trim(), str.repeat()
-- 문자열 비교 가능 (codePointAt(), fromCodePoint())
-
+- str.trim(), str.repeat(), str.includes()   
+- 문자열 비교 가능 (codePointAt(), fromCodePoint())   
 <br>
+
+* * *
 
 ### # ''    ""    ``
 - '' : html 내용을 감싸는 것이 편하다, 태그 내용을 "로 감싸는 경우가 있으므로   
@@ -15,7 +16,7 @@
 - "" : 영어 문장을 감싸는 것이 편하다, It's 등이 있으므로   
 여려줄 표현시 \n 사용해야 하며, 한 줄로 표현해야함(줄바꿈 X)   
 - `` : $ {변수}, $ {표현식} 활용 가능, 여러줄 표현 가능   
-<br>
+<br><br>
 
 - length : 문자열 길이    
   예시) 회원가입 시 아이디 및 비밀번호 입력 문자열 길이 제한 시 사용   
@@ -91,7 +92,8 @@ desc.substr(-4, 2);      // "de"
 <br>
 
 - str.trim() : 앞 뒤 공백 제거   
-- str.repeat(n) : n번 문자열 반복 
+- str.repeat(n) : n번 문자열 반복   
+- str.includes : 문자가 있으면 true, 없으면 false 반환
 ```
 let desc = "     coding            ";
 desc.trim();          // "coding"
@@ -138,6 +140,8 @@ console.log(newList);
 
 - 예제로 배워보기 2 (indexOf)   
 ```
+// 금칙어 : 콜라 
+
 function hasCola(str) {
     if(str.indexOf('콜라') > -1){
         console.log('금칙어가 있습니다.');
@@ -155,4 +159,22 @@ hasCola('콜라');             // 0 → false, 통과
 hasCola('사이다 짱!');       // -1 → false, 통과
 hasCola('풋 콜라 최고');     // 금칙어가 있습니다.
 hasCola('콜라');             // 0 → true, 금칙어가 있습니다.
+```
+<br>
+
+- 예제로 배워보기 3 (includes)   
+```
+// 금칙어 : 콜라 
+
+function hasCola(str) {
+    if(str.includes('콜라')){
+        console.log('금칙어가 있습니다.');
+    } else {
+        console.log('통과');
+    }
+}
+
+hasCola('사이다 짱!');       // 통과
+hasCola('풋 콜라 최고');     // 금칙어가 있습니다.
+hasCola('콜라');             // 금칙어가 있습니다.
 ```
