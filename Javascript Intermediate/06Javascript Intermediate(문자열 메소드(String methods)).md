@@ -3,7 +3,11 @@
 - length   
 - 특정 위치에 접근 가능   
 - toUpperCase() / toLowerCase()    
-- str.indexOf(text), str.slice(n, m)   
+- str.indexOf(text), str.slice(n, m), str.substring(n, m), str.substr(n, m)   
+- str.trim(), str.repeat()
+- 문자열 비교 가능 (codePointAt(), fromCodePoint())
+
+<br>
 
 ### # ''    ""    ``
 - '' : html 내용을 감싸는 것이 편하다, 태그 내용을 "로 감싸는 경우가 있으므로   
@@ -61,14 +65,94 @@ if(desc.indexOf('Hi') > -1) {
 ```
 <br>
 
-- str.slice(n, m)
+- str.slice(n, m)   
   * n ~ m-1 까지의 문자열만 뽑기
   * m : 없으면 문자열 끝까지, 양수면 m-1까지, 음수면 끝에서 m번째 위치까지   
+- str.substring(n, m)   
+  * n ~ m-1 까지 사이의 문자열만 뽑기   
+  * n과 m을 바꿔도 동작함   
+  * 음수는 0으로 인식   
+- str.substr(n, m)   
+  * n부터 시작하여 m개를 가져옴   
+  * n < 0 이면 마지막 n개에서 m개 가져옴     
 ```
 let desc = "abcdefg";
 
 desc.slice(2);          // "cdefg"
 desc.slice(0, 5);       // "abcde"
 desc.slice(2, -2);      // "cde"
+
+desc.substring(2, 5);      // "cde"
+desc.substring(5, 2);      // "cde"
+
+desc.substr(2, 4);      // "cdef"
+desc.substr(-4, 2);      // "de"
 ```
 <br>
+
+- str.trim() : 앞 뒤 공백 제거   
+- str.repeat(n) : n번 문자열 반복 
+```
+let desc = "     coding            ";
+desc.trim();          // "coding"
+
+let hello = "hello!";
+hello.repeat(3);          // "hello!hello!hello!"
+```
+<br>
+
+- 문자열 비교 가능 (아스키 코드표 참고)   
+  * 문자에서 숫자 코드번호 얻기 : "a".codePointAt(0);   
+  * 숫자 코드번호에서 문자 얻기 : String.fromCodePoint(97);
+
+```
+1 < 3       // true
+"a" < "c"   // true
+
+"a".codePointAt(0);         // 97
+String.fromCodePoint(97);   // "a"
+```
+<br>
+
+- 예제로 배워보기 1 (slice)   
+```
+let list = [
+    "01. 들어가며",
+    "02. JS의 역사",
+    "03. 자료형",
+    "04. 함수",
+    "05. 배열",
+]
+
+let newList = [];
+
+for(let i=0; i < list.length; i++){
+    newList.push(
+        list[i].slice(4);
+    );
+}
+console.log(newList);
+// ["들어가며", "JS의 역사", "자료형", "함수", "배열"]
+```
+<br>
+
+- 예제로 배워보기 2 (indexOf)   
+```
+function hasCola(str) {
+    if(str.indexOf('콜라') > -1){
+        console.log('금칙어가 있습니다.');
+    } else {
+        console.log('통과');
+    }
+}
+
+// > -1 적용 전 
+hasCola('사이다 짱!');       // -1 → true, 금칙어가 있습니다.
+hasCola('풋 콜라 최고');     // 금칙어가 있습니다.
+hasCola('콜라');             // 0 → false, 통과
+
+// > -1 적용 전 
+hasCola('사이다 짱!');       // -1 → false, 통과
+hasCola('풋 콜라 최고');     // 금칙어가 있습니다.
+hasCola('콜라');             // 0 → true, 금칙어가 있습니다.
+```
