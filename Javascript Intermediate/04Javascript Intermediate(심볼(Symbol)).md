@@ -1,7 +1,7 @@
 ## 심볼(Symbol)
 
 ### property key : 문자형, Symbol
-```
+``` javascript
 /* property key : 문자형 */
 
 const obj = {
@@ -13,7 +13,7 @@ obj['1'];               // "1입니다."
 obj['false'];           // "거짓"
 ```
 
-```
+``` javascript
 /* Symbol */
 // 유일한 식별자를 만들 때 사용
 // new를 붙이지 않는다!!
@@ -26,7 +26,7 @@ console.log(b);         // Symbol()
 // 동등연산자  a == b;   →  false 
 ```
 
-```
+``` javascript
 /* Symbol :유일성 보장, 전체 코드 중 딱 하나 */
 // ( ) 설명 부여 가능, Symbol 생성 간 영향 미치지 않음
 
@@ -38,7 +38,7 @@ console.log(id2);         // Symbol(id)
 // 동등연산자  id == id2;   →  false 
 ```
 
-```
+``` javascript
 /* property key : 심볼형 */
 
 const id = Symbol('id');
@@ -72,7 +72,7 @@ for(let a in user){}
   * Symbol.for 메소드는 하나를 생성한 뒤 키를 통해 같은 Symbol을 공유   
   * Symbol.keyFor() : 전역 심볼의 이름을 얻고 싶을 때 사용   
   * description : 심볼의 이름을 얻고 싶을 때 사용   
-```
+``` javascript
 const id1 = Symbol.for('id');
 const id2 = Symbol.for('id');
 // 일치연산자  id === id2;  →  true 
@@ -92,7 +92,7 @@ id.description;         // "id 입니다."
   * Symbol 을 완전히 숨길 수 있는 방법은 없다   
   * Object.getOwnPropertySymbols() : Symbol들만 볼 수 있음   
   * Reflect.ownKeys() : 심볼형 키 포함한 객체의 모든 키 확인 
-```
+``` javascript
 const id = Symbol('id');
 const user = {
     name : 'Mike',
@@ -105,7 +105,7 @@ Reflect.ownKeys(user);                  // ["name", "age", Symbol(id)]
 <br>
 
 - 예제로 배워보기   
-```
+``` javascript
 // 다른 개발자가 만들어 놓은 객체
 const user = {
     name : 'Mike',
