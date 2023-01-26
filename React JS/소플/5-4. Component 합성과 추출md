@@ -1,0 +1,54 @@
+## 5. Components and Props   
+### 5-4. Component 합성과 추출
+- **Component 합성**   
+  * 여러 개의 Component를 합쳐서 하나의 Component를 만드는 것   
+  * 리액트에서는 Component 안에 또 다른 Component를 쓸 수 있기에 복잡한 화면을 여러 개의 Component로 나눠서 구현 가능!   
+    ``` javascript
+    // Welcome 컴포넌트를 사용하여 Component 합성 예제
+    // props의 값을 다르게 하여 Welcome 컴포넌트 사용
+    // App 컴포넌트는 Welcome 컴포넌트 3개를 갖고 있는 컴포넌트임
+    function Welcome(props) {
+      return <h1>안녕, {props.name}</h1>;
+    }
+
+    function App(props) {
+      return (
+        <div>
+            <Welcome name="Mike" />;
+            <Welcome name="Steve" />;
+            <Welcome name="Jane" />;
+        </div>
+      )
+    }
+
+    ReactDOM.render(
+      <App />,
+      document.getElementById('root')
+    )
+    ```
+  * App 컴포넌트를 root로 해서 하위 컴포넌트들이 존재하는 형태가 리액트로만 구성된 앱의 기본구조   
+    기존의 웹 페이지에 리액트를 연동한다면 하나의 root node가 아닐 수 있어 이런 구조가 아닐 수도 있음
+    <br>
+  ![합성](https://user-images.githubusercontent.com/114986832/214764712-f6816b8c-3b0b-480d-a18c-bb5cec0bcbe4.png)
+  <br>
+
+- **Component 추출**   
+  * 복잡한 Component를 여러 개의 Component로 나누는 것   
+  * 큰 Component에서 일부를 추출해 새로운 Component를 만드는 것   
+  * Component 추출을 잘 활용하면 Component의 재사용성 증가 → 개발속도 증가   
+    Component가 작아질수록 해당 Component의 기능과 목적이 명확해지고 props가 단순해지기에 다른 곳에서 사용 가능성이 증가됨   
+  * 재사용 가능한 Component를 많이 갖고 있을수록 개발 속도가 빨라진다!!!
+    ``` javascript
+    // 추출 대상 Comment컴포넌트
+
+    // Comment컴포넌트 props
+
+    Component 추출하기
+    1. Avatar 추출하기
+    Comment컴포넌트에서 <img />를 추출하여 Avatar라는 별도의 컴포넌트로 만들기
+    2. UserInfo 추출하기
+
+    // Components 구조
+    Component를 어느 정도 수준까지 추출하는 것이 좋은지에 대해 정해진 기준은 없음
+    기능 단위로 추출하는 것이 좋고, 곧바로 재사용이 가능한 형태로 추출하는 것이 좋음
+    ```
