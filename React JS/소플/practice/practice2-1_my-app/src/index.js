@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Library from './chapter_03/Library';
 import Clock from './chapter_04/Clock';
 import CommentList from "./chapter_05/CommentList";
+import NotificationList from "./chapter_06/NotificationList";
 
 // chapter_03
 // const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,9 +28,17 @@ import CommentList from "./chapter_05/CommentList";
 // }, 1000);
 
 // chapter_05
+// ReactDOM.render(
+//       <React.StrictMode>
+//         <CommentList />
+//       </React.StrictMode>,
+//       document.getElementById('root')
+//     );
+
+// chapter_06
 ReactDOM.render(
       <React.StrictMode>
-        <CommentList />
+        <NotificationList />
       </React.StrictMode>,
       document.getElementById('root')
     );
