@@ -1,12 +1,13 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-//import App from './App';
 //import Library from './chapter_03/Library';
 import Clock from './chapter_04/Clock';
 
+// chapter_03
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
@@ -14,6 +15,7 @@ import Clock from './chapter_04/Clock';
 //   </React.StrictMode>
 // );
 
+// chapter_04
 setInterval(() => {
   ReactDOM.render(
     <React.StrictMode>
