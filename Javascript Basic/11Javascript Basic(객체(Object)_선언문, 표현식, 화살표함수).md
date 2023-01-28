@@ -1,29 +1,25 @@
 ### 객체(Object)
 
 #### 함수 선언문 (10 함수에서 학습함)   
-<pre>
-<code>
-    sayHello();     // 실행 가능
+``` Javascript
+sayHello();     // 실행 가능
 
-    function sayHello() {
-        console.log('Hello');
-    }
-    sayHello();     // 실행 가능
-</code>
-</pre>
+function sayHello() {
+    console.log('Hello');
+}
+sayHello();     // 실행 가능
+```
 <br>
 
 #### 함수 표현식   
 이름이 없는 함수를 만들고, 변수를 선언하여 함수 할당함   
 함수 사용 전 함수 선언부터 해야함
-<pre>
-<code>
-    let sayHello = function() {
-        console.log('Hello');
-    }
-    sayHello();
-</code>
-</pre>
+``` Javascript
+let sayHello = function() {
+    console.log('Hello');
+}
+sayHello();
+```
 <br>
 
 #### 함수 선언문 vs 함수 표현식   
@@ -43,69 +39,65 @@
 <br>
 
 #### 화살표 함수(arrow function)
-<pre>
-<code>
-    let add = function(num1, num2) {
-        return num1 + num2;
-    }
+``` Javascript
+let add = function(num1, num2) {
+    return num1 + num2;
+}
 
-    * return믄은 ( )로 표현 가능
-    * 한 줄이면 ( ) 생략 가능
-    let add = (num1, num2) => num1 + num2;
+* return믄은 ( )로 표현 가능
+* 한 줄이면 ( ) 생략 가능
+let add = (num1, num2) => num1 + num2;
 
-    * 인수가 하나면 ( ) 생략 가능
-    * 인수가 없으면  ( ) 생략 불가능
-    let sayHello = name => `Hello, ${name}`;
-    let showError = () => {
-        alert('error!');
-    }
+* 인수가 하나면 ( ) 생략 가능
+* 인수가 없으면  ( ) 생략 불가능
+let sayHello = name => `Hello, ${name}`;
+let showError = () => {
+    alert('error!');
+}
 
-    * return문이 있어도 return 전에 여러 줄의 코드가 있으면 ( ) 사용 불가
-    let add = (num1, num2) => {
-        const result = num1 + num2;
-        return result;
-    }
-</code>
-</pre>
+* return문이 있어도 return 전에 여러 줄의 코드가 있으면 ( ) 사용 불가
+let add = (num1, num2) => {
+    const result = num1 + num2;
+    return result;
+}
+```
 <br>
 
 #### 함수 선언문, 함수 표현식, 화살표 함수
-<pre>
-<code>
-    // 함수 선언문 //
-    showError();    // 실행 가능
-    function showError() {
-        console.log('error');
-    }
+``` Javascript
+// 함수 선언문 //
+showError();    // 실행 가능
+function showError() {
+    console.log('error');
+}
 
 
-    // 함수 표현식 //
-    showError();    // 에러
-    let showError = function() {
-        console.log('error');
-    }
+// 함수 표현식 //
+showError();    // 에러
+let showError = function() {
+    console.log('error');
+}
 
 
-    // 화살표 함수1 //
-    let showError = () => {
-        console.log('error')
-    }
+// 화살표 함수1 //
+let showError = () => {
+    console.log('error')
+}
 
 
-    // 화살표 함수2 //
-    sonst sayHello = (name) => {
-        const msg = `Hello, ${name}`;
-        console.log(msg)
-    }
+// 화살표 함수2 //
+sonst sayHello = (name) => {
+    const msg = `Hello, ${name}`;
+    console.log(msg)
+}
 
-    
-    // 화살표 함수3 //
-    const add = (num1, num2) => {
-        const result = num1 + num2;
-        return result;
-    }
 
-    const add = (num1, num2) => num1 + num2;
-</code>
-</pre>
+// 화살표 함수3 //
+const add = (num1, num2) => {
+    const result = num1 + num2;
+    return result;
+}
+
+const add = (num1, num2) => num1 + num2;
+```
 <br>

@@ -5,8 +5,7 @@ ex) let students = ['철수', '영희', ..., '영수'];
 
 #### 배열의 특징   
 1. 배열은 문자, 숫자, 불린, 객체, 함수 등도 포함할 수 있음   
-<pre>
-<code>
+``` Javascript
 let arr = [
     '민수',
     3,
@@ -19,8 +18,7 @@ let arr = [
         console.log('TEST');
     }
 ];
-</code>
-</pre>
+```
 <br>
 
 2. length : 배열의 길이, 그 배열이 갖고 있는 요소 수 반환   
@@ -32,8 +30,7 @@ let arr = [
 4. 반복문 for, 반복문 for ... of : 배열을 쓰는 가장 큰 이유   
    length를 통해 배열의 길이를 알 수 있으므로 for문 사용 가능   
    for ... of 가 for문보다 간단하지만 index를 못 얻는다는 단점이 있다   
-<pre>
-<code>
+``` Javascript
 // 반복문 for//
 
 let days = ['월', '화', '수'];
@@ -50,13 +47,11 @@ let days = ['월', '화', '수'];
 for (let day of days){
     console.log(day)
 }
-</code>
-</pre>
+```
 <br>
 
 - 예제로 배워보기   
-<pre>
-<code>
+``` Javascript
  // array
 
  let days = ["mon", "tue", "wed"];
@@ -95,6 +90,5 @@ for (let day of days){
  for(let day of days) {
     console.log(days);
  }      // "sun" "mon" "tue" "wed" "thu"
-</code>
-</pre>
+```
 <br>
