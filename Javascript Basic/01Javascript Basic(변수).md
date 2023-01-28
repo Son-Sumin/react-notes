@@ -11,14 +11,11 @@
     **1. let**   
     최초로 사용하는 변수명에 let 붙여 동일한 변수명 사용할 때 에러 발생시키기   
     의도적으로 (let 없이) name = "Jane"; 입력하여 변수 내용을 변경할 수 있음
-        <pre>
-        <code>
-            let name = "Mike";
-            // 1000 lines..
-            let name = "Jane";   // → console에 Uncaught SyntaxError 나옴   
-        </code>
-        </pre>
-        <br>
+    ``` Javascript
+    let name = "Mike";
+    // 1000 lines..
+    let name = "Jane";   // → console에 Uncaught SyntaxError 나옴   
+    ```
 
     **2. const**   
       절대로 바뀌지 않는 상수, 변경하려 하면 에러 발생, 주로 대문자로 기재   
@@ -33,15 +30,13 @@
 - 변수로 접근   
   **1. alert()** : 경고창을 띄우는 함수   
   **2. console.log()** : 로그를 띄우는 함수   
-  <pre>
-  <code>
-    name = "Mike";
-    age = 30;
+  ``` Javascript
+  name = "Mike";
+  age = 30;
 
-    alert(name);        → 경고창 'Mike' 활성화
-    console.log(age);   → console에 30 출력
-  </code>
-  </pre>
+  alert(name);        → 경고창 'Mike' 활성화
+  console.log(age);   → console에 30 출력
+  ```
   <br>
 
 - 추가로 변수는...    
