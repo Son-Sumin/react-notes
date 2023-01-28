@@ -24,48 +24,44 @@
   Boolean('')      => false   
   Boolean(' ')     => true   
 
-<pre>
-<code>
-    /* 명시적 형변환 */
-    // String() //
-    console.log(
-        String(3), String(true), String(false),
-        String(null), String(undefined)
-    )
-    // "3" "true" "false" "null" "undefined"
+``` Javascript
+/* 명시적 형변환 */
+// String() //
+console.log(
+    String(3), String(true), String(false),
+    String(null), String(undefined)
+)
+// "3" "true" "false" "null" "undefined"
 
 
-    // Number() //
-    console.log(
-        Number("1234"), Number("123sfsdfsa4"),
-        Number(true), Number(false)
-    )
-    // 1234 NaN 1 0
+// Number() //
+console.log(
+    Number("1234"), Number("123sfsdfsa4"),
+    Number(true), Number(false)
+)
+// 1234 NaN 1 0
 
 
-    // Boolean() //
-    console.log(
-        Boolean(0), Boolean(""), Boolean(null),
-        Boolean(undefined), Boolean(NaN)
-    )
-    // false
-</code>
-</pre>
+// Boolean() //
+console.log(
+    Boolean(0), Boolean(""), Boolean(null),
+    Boolean(undefined), Boolean(NaN)
+)
+// false
+```
 <br>
 
-<pre>
-<code>
-    /* 자동 형변환 */
+``` Javascript
+/* 자동 형변환 */
 
-    const mathScore = prompt("수학 점수?");      // 90 입력
-    const engScore = prompt("영어 점수?");       // 80 입력
-    const result = (mathScore + engScore) / 2   // "9080"/2
-    console.log(result);                        → 4540
+const mathScore = prompt("수학 점수?");      // 90 입력
+const engScore = prompt("영어 점수?");       // 80 입력
+const result = (mathScore + engScore) / 2   // "9080"/2
+console.log(result);                        → 4540
 
-    const mathScore = 90;
-    const engScore = 80;
-    const result = (mathScore + engScore) / 2   // 170/2
-    console.log(result);                        → 85
-</code>
-</pre>
+const mathScore = 90;
+const engScore = 80;
+const result = (mathScore + engScore) / 2   // 170/2
+console.log(result);                        → 85
+```
 <br>

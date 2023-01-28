@@ -9,30 +9,26 @@ alert() : 사용자에게 메세지를 띄우고 확인 버튼을 누르기 전�
 prompt() : 사용자에게 메세지를 띄우고 어떤 값을 입력받을 수 있는 필드를 제공 사용   
            확인, 취소 버튼 활성화 (취소를 누르면 null return)   
 prompt("뜬 창의 메세지", "디폴트 값") : 디폴트 값 미리 입력창에 들어가 있음. 무언가를 안내하거나 힌트를 줄 때 유용함   
-<pre>
-<code>
-    const name = prompt("이름을 입력하세요.");      → 창이 뜨고 입력한 값 = name
-    alert("환영합니다," + name + "님");             → 환영합니다, 짱구님
+``` Javascript
+const name = prompt("이름을 입력하세요.");      → 창이 뜨고 입력한 값 = name
+alert("환영합니다," + name + "님");             → 환영합니다, 짱구님
 
-    const name = prompt("이름을 입력하세요.");
-    alert(`안녕하세요, ${name}님. 환영합니다.`);    → 안녕하세요, 짱구님. 환영합니다.
+const name = prompt("이름을 입력하세요.");
+alert(`안녕하세요, ${name}님. 환영합니다.`);    → 안녕하세요, 짱구님. 환영합니다.
 
-    const name = prompt("이름을 입력하세요.");   // 입력창에 입력없이 취소를 누르면?
-    console.log(name);                          → null (아무 내용 없음을 의미)
-</code>
-</pre>
+const name = prompt("이름을 입력하세요.");   // 입력창에 입력없이 취소를 누르면?
+console.log(name);                          → null (아무 내용 없음을 의미)
+```
 <br>
 
 #### 3. confirm 확인 받음   
 확인, 취소 버튼 활성화 (확인-true, 취소-false return)   
 사용자 액션을 한 번 더 확인할 때 자주 사용   
   ex) 결제하시겠습니까?, 삭제하시겠습니까?
-<pre>
-<code>
+``` Javascript
     const isAdult = confirm("당신은 성인입니까?");
     console.log(isAdult);
-</code>
-</pre>
+```
 <br><br>
 
 

@@ -15,66 +15,62 @@
   예시) 운전면허가 있고 시력이 좋은 여군   
   -> 여군인데 시력이 좋고 운전면허가 있는 사람   
 
-<pre>
-<code>
-    const name = "Mike";
-    const age = 30;
+``` Javascript
+const name = "Mike";
+const age = 30;
 
-    // || (or) //
-    // 이름이 Tom이거나, 성인이면 통과
-    if(name === 'Tom' || age > 19) {
-        console.log('통과');
-    }  // 통과
-
-
-    // && (and) //
-    // 이름이 Mike이고, 성인이면 통과
-    if(name === 'Mike' && age > 19) {
-        console.log('통과');
-    } else {
-        console.log('돌아가');
-    }  // 통과
+// || (or) //
+// 이름이 Tom이거나, 성인이면 통과
+if(name === 'Tom' || age > 19) {
+    console.log('통과');
+}  // 통과
 
 
-    // ! (not) //
-    // 나이를 입력받아 성인 아니면 돌아가
-    const age = prompt('나이는?');
-    const isAdult = age > 19;
+// && (and) //
+// 이름이 Mike이고, 성인이면 통과
+if(name === 'Mike' && age > 19) {
+    console.log('통과');
+} else {
+    console.log('돌아가');
+}  // 통과
 
-    if(!isAdult) {
-        console.log('돌아가');
-    }  // 10 입력 → 돌아가
 
-</code>
-</pre>
+// ! (not) //
+// 나이를 입력받아 성인 아니면 돌아가
+const age = prompt('나이는?');
+const isAdult = age > 19;
+
+if(!isAdult) {
+    console.log('돌아가');
+}  // 10 입력 → 돌아가
+
+```
 <br>
 
 - 우선순위 : && > ||
-<pre>
-<code>
-    // 우선순위 //
-    // 남자이고, 이름이 Mike이거나 성인이면 통과
+``` Javascript
+// 우선순위 //
+// 남자이고, 이름이 Mike이거나 성인이면 통과
 
-    const gender = 'F';
-    const name = 'Jane';
-    const isAdult = true;
+const gender = 'F';
+const name = 'Jane';
+const isAdult = true;
 
-    if(gender === 'M' && name ==='Mike' || isAdult) {
-        console.log('통과');
-    } else {
-        console.log('돌아가');
-    }  // 통과
-
-
-    // 왜 통과일까?
-    // &&보다 ||이 나중에 평가되어 맨 마지막 평가항목이 isAdult = true이기에 최종 출력이 true, 즉 통과로 출력
+if(gender === 'M' && name ==='Mike' || isAdult) {
+    console.log('통과');
+} else {
+    console.log('돌아가');
+}  // 통과
 
 
-    if(gender === 'M' && (name ==='Mike' || isAdult)) {
-        console.log('통과');
-    } else {
-        console.log('돌아가');
-    }  // 돌아가
-</code>
-</pre>
+// 왜 통과일까?
+// &&보다 ||이 나중에 평가되어 맨 마지막 평가항목이 isAdult = true이기에 최종 출력이 true, 즉 통과로 출력
+
+
+if(gender === 'M' && (name ==='Mike' || isAdult)) {
+    console.log('통과');
+} else {
+    console.log('돌아가');
+}  // 돌아가
+```
 <br>
