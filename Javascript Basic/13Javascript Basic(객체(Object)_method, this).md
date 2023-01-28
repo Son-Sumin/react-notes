@@ -28,9 +28,9 @@ user.sayHello();    // Hello, I'm Mike
 <br>
 
   * this 예제   
-  * 화살표함수는 일반함수와 달리 자신만의 this를 가지지 않음   
+  * **화살표함수는 일반함수와 달리 자신만의 this를 가지지 않음   
     화살표함수 내부에서 this를 사용하면 그 this는 외부에서 값을 가져옴   
-    이때 this는 전역객체이고 브라우저 환경(window), Node js(global)을 가리킨다   
+    이때 this는 전역객체이고 브라우저 환경(window), Node js(global)을 가리킨다**   
 ``` Javascript
 // this 예제 //
 
@@ -67,8 +67,8 @@ boy.sayHello();             // this != boy
 <br>
 
 - 예제로 배워보기 1   
-  method의 this는 해당 객체 { }를 가리킴   
-  method에서 객체명을 직접 활용하는 것보다 this를 활용하는 것이 좋음   
+  **method의 this는 해당 객체 { }를 가리킴   
+  method에서 객체명을 직접 활용하는 것보다 this를 활용하는 것이 좋음**   
 ``` Javascript
 // method
 let boy = {
@@ -87,12 +87,12 @@ man.showName();     // "Mike"
 // boy.showName();     // "Tom"
 
 boy = null;
-man.showName();     // 에러 발생  →  boy.name => this.name      // "Mike"
+man.showName();     // 에러 발생  →  let boy 코드 수정 : boy.name => this.name      // "Mike"
 ```
 <br>
 
 - 예제로 배워보기 2   
-  객체의 method를 작성할 때 this를 활용할거면 화살표 함수를 사용하지 않는 것이 좋다
+  **객체의 method를 작성할 때 this를 활용할거면 화살표 함수를 사용하지 않는 것이 좋다**
 ``` Javascript
 // method
 let boy = {
