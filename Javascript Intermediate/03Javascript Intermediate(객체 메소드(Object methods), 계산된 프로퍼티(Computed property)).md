@@ -16,6 +16,7 @@ const user1 = {
     // user1 {5: 5, 안녕하세요: "Hello"}
 }
 ```
+<br>
 
 ### Object methods   
 Object.assign() : 객체 복제   
