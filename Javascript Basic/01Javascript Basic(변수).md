@@ -6,20 +6,21 @@
   *주의 → 'class'는 Reserved Words로서 변수명으로 사용 불가*   
   <br>
 
-  * 동일 이름의 변수명은 가장 마지막에 정의된 내용으로 덮어 쓰여짐   
-    위를 방지하기 위한 2가지 방법   
-    **1. let**   
-    최초로 사용하는 변수명에 let 붙여 동일한 변수명 사용할 때 에러 발생시키기   
-    의도적으로 (let 없이) name = "Jane"; 입력하여 변수 내용을 변경할 수 있음
-    ``` Javascript
-    let name = "Mike";
-    // 1000 lines..
-    let name = "Jane";   // → console에 Uncaught SyntaxError 나옴   
-    ```
+- 동일 이름의 변수명은 가장 마지막에 정의된 내용으로 덮어 쓰여짐   
+  위를 방지하기 위한 2가지 방법   
+  **1. let**   
+  최초로 사용하는 변수명에 let 붙여 동일한 변수명 사용할 때 에러 발생시키기   
+  의도적으로 (let 없이) name = "Jane"; 입력하여 변수 내용을 변경할 수 있음
+  ``` Javascript
+  let name = "Mike";
+  // 1000 lines..
+  let name = "Jane";   // → console에 Uncaught SyntaxError 나옴   
+  ```
 
-    **2. const**   
-      절대로 바뀌지 않는 상수, 변경하려 하면 에러 발생, 주로 대문자로 기재   
-      ex) PI, SPEED_LIMIT, BIRTH_DAY   
+  **2. const**   
+    절대로 바뀌지 않는 상수, 변경하려 하면 에러 발생, 주로 대문자로 기재   
+    ex) PI, SPEED_LIMIT, BIRTH_DAY   
+    <br>
 
   **결론**   
     Javascript에서 변수를 선언할 때는   
