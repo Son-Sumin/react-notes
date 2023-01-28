@@ -8,8 +8,7 @@
 - 차이점
   * var : 한 번 선언된 변수를 다시 선언할 수 있다
   * var : 선언하기 전에 사용할 수 있다
-  <pre>
-  <code>
+  ``` Javascript
     /* var는 한 번 선언된 변수를 다시 선언할 수 있다 */
 
     var name = 'Mike';
@@ -24,12 +23,10 @@
 
     let name = 'Jane';
     console.log(name);      // error!!
-  </code>
-  </pre>
+  ```
   <br>
 
-  <pre>
-  <code>
+  ``` Javascript
     /* var는 선언하기 전에 사용할 수 있다 */
 
     console.log(name);      // undefined (에러 아님)
@@ -51,15 +48,13 @@
        이는 코드를 예측하게 하고 잠재적 버그 감소에 효과적이다.
     console.log(name);      // ReferenceError
     let name = 'Mike';
-  </code>
-  </pre>
+  ```
   <br><br>
 
 - **호이스팅(Hoisting)** : 스코프 내부 어디서든 변수 선언은 최상위에 선언된 것처럼 행동   
   호이스팅은 스코프 단위로 일어난다   
   
-<pre>
-<code>
+``` Javascript
     // 이상 X
     let age = 30;
     function showAge() {
@@ -75,8 +70,7 @@
       let age = 20;     // 호이스팅 발생시킴
     }
     showAge();          // 위에서 호이스팅 발생하지 않았다면 정상적으로 30이 출력되야함
-  </code>
-  </pre>
+  ```
   <br><br>
 
 - **변수의 생성과정**
@@ -103,8 +97,7 @@
   >  * const   
   >  1. 선언 + 초기화 + 할당   
   >     let과 var는 선언만 하고 나중에 할당이 가능함   
-  > <pre>
-  > <code>
+  > ``` Javascript
   >     let name;
   >     name = 'Mike';
   > 
@@ -113,8 +106,7 @@
   > 
   >     const gender;
   >     gender = 'male';    // SyntaxError → 선언하면서 바로 할당 안했기 때문
-  > </code>
-  > </pre>
+  > ```
 <br><br>
 
 
@@ -127,7 +119,7 @@
   >      ex) 함수, if문, for문, while문, try/catch문 등   
   >
   > - 함수 스코프 : 함수 내에서만 선언된 변수가 그 지역변수가 된다.   
-```
+``` Javascript
   /* 예시1 */
   const age = 30;
   

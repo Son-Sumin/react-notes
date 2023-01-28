@@ -23,7 +23,7 @@
 - 특정 위치에 접근 가능   
   배열과 같이 index는 0부터 시작함   
   하지만 배열과 다르게 한 글자만 바꾸는 것 불가
-```
+``` Javascript
 // length : 문자열 길이
 let desc = '안녕하세요.';
 desc.length     // 6
@@ -39,7 +39,7 @@ console.log(desc);      // "안녕하세요." (바뀌지 않음)
 <br>
 
 - toUpperCase() / toLowerCase()   
-```
+``` Javascript
 let desc = "Hi guys. Nice to meet you.";
 
 desc.toUpperCase();     // "HI GUYS. NICE TO MEET YOU."
@@ -53,7 +53,7 @@ desc.toLowerCase();     // "hi guys. nice to meet you."
   * 해당 문자 없으면 -1 반환함   
   * 포함된 문자가 여러 개여도 첫 번째 문자의 위치만 반환함   
   * if문에서 사용시 주의 (조건문에 '> -1' 꼭 붙이기)
-```
+``` Javascript
 let desc = "Hi guys. Nice to meet you.";
 
 desc.indexOf('to');     // 14
@@ -76,7 +76,7 @@ if(desc.indexOf('Hi') > -1) {
 - str.substr(n, m)   
   * n부터 시작하여 m개를 가져옴   
   * n < 0 이면 마지막 n개에서 m개 가져옴     
-```
+``` Javascript
 let desc = "abcdefg";
 
 desc.slice(2);          // "cdefg"
@@ -94,7 +94,7 @@ desc.substr(-4, 2);      // "de"
 - str.trim() : 앞 뒤 공백 제거   
 - str.repeat(n) : n번 문자열 반복   
 - str.includes : 문자가 있으면 true, 없으면 false 반환
-```
+``` Javascript
 let desc = "     coding            ";
 desc.trim();          // "coding"
 
@@ -107,7 +107,7 @@ hello.repeat(3);          // "hello!hello!hello!"
   * 문자에서 숫자 코드번호 얻기 : "a".codePointAt(0);   
   * 숫자 코드번호에서 문자 얻기 : String.fromCodePoint(97);
 
-```
+``` Javascript
 1 < 3       // true
 "a" < "c"   // true
 
@@ -117,7 +117,7 @@ String.fromCodePoint(97);   // "a"
 <br>
 
 - 예제로 배워보기 1 (slice)   
-```
+``` Javascript
 let list = [
     "01. 들어가며",
     "02. JS의 역사",
@@ -139,7 +139,7 @@ console.log(newList);
 <br>
 
 - 예제로 배워보기 2 (indexOf)   
-```
+``` Javascript
 // 금칙어 : 콜라 
 
 function hasCola(str) {
@@ -163,7 +163,7 @@ hasCola('콜라');             // 0 → true, 금칙어가 있습니다.
 <br>
 
 - 예제로 배워보기 3 (includes)   
-```
+``` Javascript
 // 금칙어 : 콜라 
 
 function hasCola(str) {

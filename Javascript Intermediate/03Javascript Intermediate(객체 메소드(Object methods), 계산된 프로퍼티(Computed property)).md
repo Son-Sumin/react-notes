@@ -1,7 +1,7 @@
 ## 객체 메소드(Object methods), 계산된 프로퍼티(Computed property)
 
 ### Computed property   
-```
+``` Javascript
 let a = 'age';
 
 const user = {
@@ -28,7 +28,7 @@ Object.fromEntries() : 키, 값 배열을 객체로 반환
 - Object.assign() : 객체 복제   
   * Object.assign(담을 객체, 병합시킬 객체1, 병합시킬 객체2, ...)   
   * 기존에 추가, 덮어쓰기, 여러 개 병합 가능   
-```
+``` Javascript
 const user = {
     name : 'Mike',
     age : 30
@@ -74,7 +74,7 @@ Object.assign(user, info1, info2);
 - Object.entries() : 키, 값 배열 반환 (배열 안에 배열로 출력)
 - Object.fromEntries() : 키, 값 배열을 객체로 반환
   * Object.keys(객체), Object.values(객체), Object.entries(객체), Object.fromEntries(객체)   
-```
+``` Javascript
 const user = {
     name : 'Mike',
     age : 30,
@@ -95,7 +95,7 @@ Object.fromEntries(user);  // { name : 'Mike', age : 30, gender : 'male', }
 <br>
 
 - 예제로 배워보기(Computed property)   
-```
+``` Javascript
 let n = "name";
 let a = "age";
 
@@ -107,7 +107,7 @@ const user = {
 
 console.log(user);              // {5: 5, name: "Mike", age: 30}
 ```
-```
+``` Javascript
 function makeObj(key, val) {
     return {
         [key]: val
@@ -119,7 +119,7 @@ console.log(obj);               // {나이: 33}
 <br>
 
 - 예제로 배워보기(Object methods)   
-```
+``` Javascript
 // 복제가 아니라 참조값 복사 
 const user = {
     name: "Mike",
@@ -133,7 +133,7 @@ console.log(user);       // {name: "Tom", age: 30}
 console.log(user2);      // {name: "Tom", age: 30}
 ```
 
-```
+``` Javascript
 const user = {
     name: "Mike",
     age: 30,

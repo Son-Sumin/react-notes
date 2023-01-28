@@ -1,4 +1,7 @@
 ## 심볼(Symbol)
+- property key : 문자형, Symbol   
+- Symbol.for() : 전역 심볼   
+  Symbol.keyFor(), .description
 
 ### property key : 문자형, Symbol
 ``` javascript

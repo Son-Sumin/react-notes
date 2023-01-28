@@ -6,7 +6,7 @@
 비슷한 객체 리터럴을 여러 개 만들어야할 때 생성사 함수 활용   
 생성자 함수는 관례적으로 첫 글자를 대문자로 표기   
 **생성자 함수는 꼭 new와 함께 사용해야 한다!!**
-```
+``` Javascript
 /* 객체 리터널 */
 
 let user = {
@@ -29,7 +29,7 @@ let user3 = new User('Tom', 17);    → User {name: "Tom", age: 17}
 <br>
 
 - **동작 원리**
-```
+``` Javascript
 function User(name, age) {
     // this = {}
     this.name = name;
@@ -47,7 +47,7 @@ new 함수명();
 <br>
 
 - 생성자 함수 : 프로퍼티에 메소드 추가
-```
+``` Javascript
 function User(name, age) {
     this.name = name;
     this.age = age;
@@ -62,7 +62,7 @@ user5.sayName();    // 'Han'    → 함수 sayName에서 this.name은 여기서 
 <br>
 
 - 생성자 함수 예시 : 상품 객체를 생성해보자
-```
+``` Javascript
 funciton Item(title, price){
     // this = {};  (이해용, new 사용시 발생하는 코드)
 
