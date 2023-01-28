@@ -26,8 +26,8 @@ console.log(name);                          → null (아무 내용 없음을 �
 사용자 액션을 한 번 더 확인할 때 자주 사용   
   ex) 결제하시겠습니까?, 삭제하시겠습니까?
 ``` Javascript
-    const isAdult = confirm("당신은 성인입니까?");
-    console.log(isAdult);
+const isAdult = confirm("당신은 성인입니까?");
+console.log(isAdult);
 ```
 <br><br>
 
