@@ -2,7 +2,7 @@
 
 #### 객체(Object)
 - Object - 생성, 접근, 추가, 삭제   
-  const/let = {key1:value1(property1), key2:value2(property2), }
+  * const/let 객체이름 = {key1:value1(property1), key2:value2(property2), ... }
 ``` Javascript
 // 생성 //
 const superman = {
@@ -24,7 +24,7 @@ delete superman.hairColor;
 <br>
 
 - Object - 단축 property   
-  property 이름 = 변수 이름 경우   
+  * 'property 이름 = 변수 이름' 경우 사용 가능   
 ``` Javascript
 // 변수 name, age의 값
 const name : 'clark';
@@ -46,6 +46,8 @@ const superman = {
 <br>
 
 - Object - property 존재 여부 확인   
+  * in 연산자 활용   
+  * . 또는 [] 아닌 in 사용 이유 : 어떤 값이 넘어올지 확신할 수 없을 때 사용   
 ``` Javascript
 const superman = {
     name : 'clark',
@@ -55,14 +57,11 @@ const superman = {
 superman.birthDay;       // undefined (에러 발생X)
 'birthDay' in superman;  // false
 'age' in superman;       // true
-
-* in 연산자를 활용하여 해당 property 존재 여부 확인 가능   
-    . 또는 [] 아닌 in은 어떤 값이 넘어올지 확신할 수 없을 때 사용
 ```
 <br>
 
 - for ... in 반복문   
-  객체 순회하며 값 획득 가능
+  * 객체 순회하며 값 획득 가능   
 ``` Javascript
 for(let key in superman) {
     console.log(key)
@@ -88,11 +87,11 @@ superman.['hobby'] = 'football';
 delete superman.age;
 console.log(superman)
 /*
-Object {
-    hairColor : "black",
-    hobby : "football",
-    name : "clark",
-}
+    Object {
+        hairColor : "black",
+        hobby : "football",
+        name : "clark",
+    }
 */
 ```
 <br>
@@ -115,7 +114,7 @@ console.log(Mike)
         hobby: "football",
         name: "Mike"
     }
-    */
+*/
 
     // in 연산자 활용
     // . 또는 [] 사용하면 되니 실용적 예제는 아님
@@ -146,7 +145,8 @@ const Jane = {
 
 console.log(isAdult(Mike))      // true
 console.log(isAdult(Jane))      // true
-                                // Jane의 property 중 age가 존재하지 않아 if문은 항상 false이고, true가 반환됨 (if문 조건 추가)
+                                // Jane의 property 중 age가 존재하지 않아 if문은 항상 false이고, true가 반환됨
+                                  (if문 조건 추가 " || user.age < 20 ")
 ```
 <br>
 
@@ -158,7 +158,7 @@ const Mike = {
     age: 30,
 };
 
-for(key in Mike) {              // key는 Mike가 갖고 있는 property를 의미함. 다른 값이 와도 됨.
+for(key in Mike) {              // key는 Mike가 갖고 있는 property를 의미함. 다른 이름이 와도 됨.
     console.log(key)            // "name" "age"
     console.log(Mike[key])      // Mike['name']="Mike"   Mike['age']=30
 }
