@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-class ConfirmButton)(props) {
+class ConfirmButton extends React.Component {
     constructor(props) {
         super(props);
 
@@ -23,19 +23,23 @@ class ConfirmButton)(props) {
     // }
 
     // 2. Class fields syntax 사용
-    // Arrow function 사용
+    // Arrow function으로 변경
     handleConfirm = () => {
         this.setState((prevState) => ({
             isConfirmed: !prevState.isConfirmed,
         }));
     }
 
-
-    return (
-        <button onClick={handleConfirm} disabled={isConfirmed}>
-            {isConfirmed ? "확인됨" : "확인하기"}
-        </button>
-    );
+    render() {
+        return (
+            <button 
+                onClick={this.handleConfirm}
+                disabled={this.state.isConfirmed}
+            >
+                {this.state.isConfirmed ? "확인됨" : "확인하기"}
+            </button>
+        );
+    }
 }
 
 export default ConfirmButton;
