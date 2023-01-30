@@ -23,7 +23,7 @@ class ConfirmButton extends React.Component {
     // }
 
     // 2. Class fields syntax 사용
-    // Arrow function으로 변경
+    // Arrow function 사용
     handleConfirm = () => {
         this.setState((prevState) => ({
             isConfirmed: !prevState.isConfirmed,
