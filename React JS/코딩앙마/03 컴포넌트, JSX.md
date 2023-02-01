@@ -8,14 +8,10 @@
     index.js에서 import App from './App'; 로 사용 중   
   * **모든 컴포넌트는 대문자로 시작해야 한다**   
   * 함수 컴포넌트 App() 리턴하는 것은 JSX(JavaScript XML)   
-  * App.js로 간단한 실습 시작
-    
-
-
-    ![index](https://user-images.githubusercontent.com/114986832/216050471-209dc18d-9898-442f-a9e0-1dd1bb89481d.PNG)
-![package dependencies, npx 명령어](https://user-images.githubusercontent.com/114986832/216050476-c1285b46-1c2e-4374-9cce-c2c017035653.PNG)
-![03App](https://user-images.githubusercontent.com/114986832/216050482-36ddbf19-7b57-4e40-b2a9-24f54fd4197e.PNG)
-![3강](https://user-images.githubusercontent.com/114986832/216050484-5400d7dc-751e-41b0-8201-8674d9fb67cd.PNG)
+  * App.js로 간단한 실습 시작   
+    ![03App](https://user-images.githubusercontent.com/114986832/216050482-36ddbf19-7b57-4e40-b2a9-24f54fd4197e.PNG)
+  * 실습 종료   
+    ![3강](https://user-images.githubusercontent.com/114986832/216050484-5400d7dc-751e-41b0-8201-8674d9fb67cd.PNG)
 
 
 
