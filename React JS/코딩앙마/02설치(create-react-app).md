@@ -6,7 +6,7 @@
     (npx : npm이 올라간 패키지를 바로 실행해서 설치시켜주는 도구)   
   * npm start   
     리액트 시작   
-  * package.jsondp "script"에 명령어 명시   
+  * package.json에 "script"에 명령어 명시   
     * start : 개발 모드로 프로그램 실행   
     * build : 실제 배포모드로 만들어줌   
     * test : test 실행   
