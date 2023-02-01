@@ -10,7 +10,9 @@
     * start : 개발 모드로 프로그램 실행   
     * build : 실제 배포모드로 만들어줌   
     * test : test 실행   
-    * eject : 내부 설정 꺼냄 (webpack, babel 설정 변경 시 사용)
+    * eject : 내부 설정 꺼냄 (webpack, babel 설정 변경 시 사용)   
+      ![package dependencies, npx 명령어](https://user-images.githubusercontent.com/114986832/216191453-34a12f74-98b1-4862-96fe-0ab04c7bd0a7.PNG)
+
   <br>
 
 - 실습 파일 : voca   
@@ -20,6 +22,7 @@
     (git에 node_modules 올리지 않아도 package.json 확인하면 동일한 개발환경 구축 가능)
   * public > index.html : <div id="root"></div> 밑으로 리액트 코드가 실행되서 만들어진 DOM이 구현됨   
   * src > index.js : document.getElementById('root') 의 <App />을 ReactDOM.render 시켜준다고 이해하기 (위의 'root'와 동일)   
+    ![index](https://user-images.githubusercontent.com/114986832/216191657-cb236411-ba90-4fd2-b389-cb44d5734ef9.PNG)
   * App.js : 코드 구현하기   
     <br>
 
