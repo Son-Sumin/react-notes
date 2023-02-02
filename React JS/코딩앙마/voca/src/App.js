@@ -1,32 +1,20 @@
 import './App.css';
+import Hello from './component/Hello';
+import Welcome from './component/Welcome';
 
 function App() {
-  const name = "Tom";
-  const naver = {
-    name: "네이버",
-    url: "https://www.naver.com/"
-  }
 
   return (
     <div className="App">
-      <h1 style={{
-          color : '#ff0',
-          backgroundColor : 'green',
-        }}> 
-          Hello, {name}~
-          <p>{2+3}</p>
-      </h1>
-      <a href={naver.url}>{naver.name}</a>
+      <Hello />
+      <Hello />
+      <Welcome />
     </div>
   );
 }
 
 export default App;
 
-
-// <h1 style{}>은 객체로 부여, color:'문자열'로 작성
-// {} 내부에 변수, 문자형, 숫자형 사용 가능 / 불린형, 객체 사용 불가능
-/*
-  const user = { name: "Jane", } 작성 후
-  div h1 내용으로 <p>{user}</p> 넣으면 브라우저에 출력 X
-*/
+// js 파일 생성 후 함수를 만들고, export 해주면 간단히 컴포넌트 생성 가능
+// 컴포넌트는 항상 대문자로 시작
+// 한 번 만든 컴포넌트는 어디에든, 몇 번이든 재사용 가능
